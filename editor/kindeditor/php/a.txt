@@ -1,0 +1,6 @@
+<h3>
+	<img src="http://localhost/timelinepractice/editor/kindeditor/plugins/emoticons/images/44.gif" border="0" alt="" /><img src="http://api.map.baidu.com/staticimage?center=121.473704%2C31.230393&zoom=11&width=558&height=360&markers=121.473704%2C31.230393&markerStyles=l%2CA" alt="" /><img align="left" height="100" width="100" src="/timelinepractice/editor/kindeditor/attached/image/20160404/20160404161154_17061.jpg" title="" alt="" />在此处输入标题
+</h3>
+<p>
+	在此处输入内容
+</p>

@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+body{
+	margin:0;font:12px/180%  "微软雅黑"，"宋体";
+}
+html,body{
+	-webkit-text-size-adjust:none;background:#f3f3f3;
+}
+div,form,input,textarea,p,ul,li,dl,dt,dd,h1,table,h2{
+	padding:0;margin:0;
+}
+li{
+	list-style-type:none;
+}
+ol,ul,li{
+	list-style:none;
+}
+input{
+	vertical-algin:middle;font-size:100%;
+}
+img{
+	vertical-algin:top;boder:0;
+}
+em,i{
+	font-style:normal;
+}
+a{
+	text-decoration:none;color:#666;
+}
+
+a:hover{
+	color:#F60;text-decoration:underline;
+}
+
+.jiaocheng{
+	width:500px;
+	height:300px;
+}

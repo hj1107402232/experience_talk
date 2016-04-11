@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>学习路径</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="js/jquery.min.js"></script>
+<script type="text/javascript"  src="js/comm.js"></script>
+
+</head>
+<body>
+
+<div class="content">
+<textarea id="editor_id" name="content" style="width:700px;height:300px;">
+&lt;strong&gt;HTML内容&lt;/strong&gt;
+</textarea>
+<input type="button" name="subbtn" value="提交" onclick="submit();"/>
+<div id='showcontent'></div>
+</div>
+<script charset="utf-8" src="editor/kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="editor/kindeditor/lang/zh-CN.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+        function submit()
+        {
+        	//alert("Hello World!");
+        	html = window.editor.html();
+
+            // 同步数据后可以直接取得textarea的value
+            window.editor.sync();
+            html = document.getElementById('editor_id').value;
+            //alert(html);
+            $("#showcontent").html(html);
+        }
+     // 取得HTML内容
+        
+</script>
+</body>
+</html>
