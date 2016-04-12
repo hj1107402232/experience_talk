@@ -148,3 +148,21 @@ hr{
 	margin-left:92px;
 	margin-top:10px;
 }
+.jiaocheng .up {
+	height: 70px;
+	background: white;
+}
+
+.jiaocheng .up .up_left {
+	width: 60px;
+	height: 80px;
+	background: black;
+}
+
+.jiaocheng .up .up_left .avatar{
+	width :54px;
+	height: 54px;
+	margin: 3px;
+
+	background: red;
+}
