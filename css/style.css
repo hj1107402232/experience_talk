@@ -2,6 +2,7 @@
 
 body{
 	margin:0;font:12px/180%  "微软雅黑"，"宋体";
+	margin-left: auto;margin-right: auto;text-align: center;	
 }
 html,body{
 	-webkit-text-size-adjust:none;background:#f3f3f3;
@@ -35,16 +36,16 @@ a:hover{
 /*
  * content css
  */
-.content{position:relative;width:1000px;margin:0 auto 0 auto;}
+.content{position:relative;width:78%;margin:0 auto 0 auto;}
 /*#3a3c48这个保证了加载时图片加载不出来的时候不会空白*/
-.content{padding:30px 0;min-height:720px;  ;width:100%;}
-.content .wrapper{position:relative;width:950px;margin:0 290px;margin-top:60px;}
+.content{padding:30px 0;}
+.content .wrapper{position:relative;width:950px;margin:0 241px;margin-top:60px;}
 
 .content .main{background:url("../images/log/line-bg.png") repeat-y 70px 0}
 .content .main .title{text-algin:center;line-height:40px;color:#58a6fb;font-size:24px;background:url("../images/log/clock.png") no-repeat 	52px 0 ;}
 .content .main .title p{margin-left:92px;}
 .content .main .year{position:realtive;z-index:100;}
-.content .main .year h2{font-size:24px;height:40px;text-align:left;margin-left:110px;padding-top:10px;}
+.content .main .year h2{font-size:24px;height:29px;text-align:left;margin-left:110px;padding-top:10px;}
 .content .main .year h2 a{position:relative;color:#58a6fb;}
 .content .main .year h2 i{position:absolute;top:50%;right:-20px;border-width:6px;border-style:solid;border-color:#59a7fb transparent transparent transparent;-webkit-transition:.5s;-moz-transition:.5s;-ms-transition:.5s;-o-transition:.5s;-webkit-transform-origin:6px 3px;-moz-transform-origin:6px 3px;-o-transform-origin:6px 3px;transform-origin:6px 3px}
 .content .main .year .list{margin:10px 0;position:relative;overflow:hidden;--webkit-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;-moz-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;-ms-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;-o-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s}
@@ -55,17 +56,17 @@ a:hover{
 .cls:after{content:"none";visibility:hidden;height:0;display:block;clear:both;}
 .heading_nav:after{content:"none";visibility:hidden;height:0;display:block;clear:both;}
 .more:after{content:"none";visibility:hidden;height:0;display:block;clear:both;}
-.content .main .year .list .cls .date{margin-left:100px;font-size:20px;color:#63d029;width:80px;line-height:32px;margin-bottom:30px;}
-.content .main .year .list .cls .intro{color:#63d029;font-size:18px;line-height:32px;display:block;width:832px;height:100px;margin-left:47px;background-color:white;padding:10px;}
-.content .main .year .list .cls .more{margin-left:100px;}
+.content .main .year .list .cls .date{margin-left:60px;font-size:20px;color:#63d029;width:180px;line-height:32px;margin-bottom:10px;}
+.content .main .year .list .cls .intro{color:#63d029;font-size:18px;line-height:32px;display:block;width:860px;margin-left:47px;background-color:white;}
+.content .main .year .list .cls .more{margin-left:43px;}
 
 .content .main .year .list .cls.highlight .date, .content .main .year .list .highlight .intro{color:#ec6a13;}
 .content .main  .close.year h2 i{transform:rotate(-90deg);-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg);}
 .content .main .close.year .list{height:0 !important;}
 
 
-.content .main .year .list .cls .more .tabbox{width:180px;height:250px;background-color:white;padding:5px;float:left;margin:4px;}
-.content .main_left{overflow:hidden;float:left;width:290px;min-height:1000px;margin-left:50px;}
+.content .main .year .list .cls .more .tabbox{width:160px;height:250px;background-color:white;padding:4px;float:left;margin:2px;}
+.content .main_left{overflow:hidden;float:left;width:290px;min-height:1000px;}
 
 .content .main .year .list .cls .more .tabbox .blackimage{display:block;background-color:#404040;height:80px;width:100%;}
 .content .main .year .list .cls .more .tabbox .boxtitle{line-height:80px;text-align:center;}
@@ -81,11 +82,11 @@ a:hover{
 img{border-radius:3px}
 
 
-.head_content{width:100%;height:60px;background:#58749c;padding:5px;position:fixed;z-index:1000;}
+.head_content{width:100%;height:50px;background:#58749c;padding:5px;position:fixed;z-index:1000;}
 
 
 .logo{font-size:30px;margin-left:90px;font-family: Georgia, serif;float:left;text-align:left;color:black;}
-.head_ul{float:left;list-style-type:none;margin-left:40px;}
+.head_ul{float:left;list-style-type:none;margin-left:40px;line-height: 37px;}
 .head_tab{float:left;margin-left:70px;font-size:20px;}
 .head_ul a:link,.head_ul a:visited,.logo a:link,.logo a:visited{
 	color:white;
@@ -97,7 +98,7 @@ img{border-radius:3px}
 	color:black;
 }
 .heading_nav{
-	padding-top:20px;
+	padding-top:7px;
 	padding-bottom:10px;
 }
 .heading_img img{
@@ -143,7 +144,7 @@ hr{
 /*total css*/
 .jiaocheng{
 	width:858px;
-	height:300px;
+	height:260px;
 	background:green;
 	margin-left:92px;
 	margin-top:10px;
@@ -157,12 +158,115 @@ hr{
 	width: 60px;
 	height: 80px;
 	background: black;
+	float: left;
 }
 
 .jiaocheng .up .up_left .avatar{
 	width :54px;
 	height: 54px;
 	margin: 3px;
-
+    border-radius: 3px;
 	background: red;
+}
+.up_left .praise{
+	width: 54px;
+	height:20px;
+	background: green;
+	margin-top: 57px;
+	margin-left: 3px;
+}
+.up_right{
+	margin-left: 52px;
+	width: 858px;
+	height: 60px;
+}
+.jiaocheng .up .up_right .one_jc_title{
+	height: 30px;
+	width: 800px;
+	line-height:30px;   
+	background: red;
+}
+.one_jc_title p{
+	white-space: nowrap;
+	margin-left: 10px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.author{
+	width: 100px;
+	height: 30px;
+	background: green;
+	margin-left: 10px;
+	margin-top: 5px;
+	line-height: 30px;
+	float: left;
+}
+.father_jc p{
+	margin-top: 5px;
+	float: left;
+	line-height: 30px;
+
+}
+.father_jc .father_jc_name{
+	line-height: 30px;
+	margin-top: 5px;
+	background: yellow;
+	width: 100px;
+	float: left;
+
+}
+.down {
+	height: 130px;
+	background: yellow;
+	margin-top: 20px;
+}
+
+.down .down_left{
+
+	float: left;
+	background: red;
+}
+.down .down_left .jc_img{
+
+	width: 200px;
+	height: 120px;
+	float: left;
+
+}
+.down .down_right  {
+	margin-left: 205px;
+	width: 655px;
+	height: 120px;
+
+	overflow: hidden;
+	line-height: 24px;
+
+}
+.jc_bottom{
+	width: 100px;
+	height: 30px;
+	float: left;
+	background: red;
+
+}
+.create_time{
+	width: 100px;
+	height: 30px;
+	background: black;
+	margin-left: 110px;
+	float: left;
+}
+.jc_taglist{
+	width: 500px;
+	height: 30px;
+	background: white;
+	margin-left: 220px;
+}
+.jc_taglist .jc_tag{
+	width: 100px;
+	height: 30px;
+	background: red;
+	margin-left: 10px;
+	float: left;
 }
