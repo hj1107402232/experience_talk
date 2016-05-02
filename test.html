@@ -11,11 +11,12 @@
 <body>
 
 <div class="content">
-<textarea id="editor_id" name="content" style="width:700px;height:300px;">
+<textarea id="editor_id" name="content" style="width:700px;min-height:900px;">
 &lt;strong&gt;HTML内容&lt;/strong&gt;
 </textarea>
 <input type="button" name="subbtn" value="提交" onclick="submit();"/>
-<div id='showcontent'></div>
+<input type="button" name="subbtn1" value="预览" onclick="submit1();"/>
+<div id='showcontent'style="width:700px;text-algin:left"></div>
 </div>
 <script charset="utf-8" src="editor/kindeditor/kindeditor-all.js"></script>
 <script charset="utf-8" src="editor/kindeditor/lang/zh-CN.js"></script>
@@ -33,6 +34,17 @@
             html = document.getElementById('editor_id').value;
             //alert(html);
             $("#showcontent").html(html);
+        }
+        function submit1()
+        {
+        	//alert("Hello World!");
+        	html = window.editor.html();
+
+            // 同步数据后可以直接取得textarea的value
+            window.editor.sync();
+            html = document.getElementById('editor_id').value;
+            //alert(html);
+            window.open('http://www.baidu.com', '_blank', 'width=645,height=550');
         }
      // 取得HTML内容这是我在本地添加的一行
         

@@ -1,0 +1,47 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jsTree v.1.0 - Demo</title>
+	<script type="text/javascript" src="_lib/jquery.js"></script>
+	<script type="text/javascript" src="_lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="_lib/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="_lib/jquery.jstree.js"></script>
+	<link type="text/css" rel="stylesheet" href="_docs/syntax/!style.css"/>
+	<link type="text/css" rel="stylesheet" href="_docs/!style.css"/>
+	<script type="text/javascript" src="_docs/syntax/!script.js"></script>
+</head>
+<div id="description">
+<div id="demo4" class="demo" style="height:120px;">
+	<ul>
+		<li class="jstree-open">
+			<a href="#">Root node 1</a>
+			<ul>
+				<li>
+					<a href="#">Child node 1 with a long text which would normally just cause a scrollbar, but with this line of CSS it will actually wrap, this is not really throughly tested but it works</a>
+				</li>
+				<li>
+					<a href="#">Child node 2</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Root node 2</a>
+		</li>
+	</ul>
+</div>
+<style type="text/css" class="source below">
+#demo4 a { white-space:normal !important; height: auto; padding:1px 2px; } 
+#demo4 li > ins { vertical-align:top; }
+#demo4 .jstree-hovered, #demo4 .jstree-clicked { border:0; }
+</style>
+<script type="text/javascript">
+$(function () {
+	$("#demo4")
+		.jstree({ "plugins" : ["themes","html_data","ui"] });
+});
+</script>
+</div>
+
