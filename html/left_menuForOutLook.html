@@ -9,6 +9,8 @@
 	<script type="text/javascript" src="../js/jquery.ztree.core.js"></script>
 	<script type="text/javascript" src="../js/jquery.ztree.excheck.js"></script>
 	<script type="text/javascript" src="../js/jquery.ztree.exedit.js"></script>
+	<script charset="utf-8" src="../editor/kindeditor/kindeditor-all.js"></script>
+	<script charset="utf-8" src="../editor/kindeditor/lang/zh-CN.js"></script>
 	<SCRIPT type="text/javascript">
 		<!--
 
@@ -58,7 +60,7 @@ var zNodes =[
 			{ id:33, pId:3, name:"叶子节点 3-3"}
 		];
 		var log, className = "dark";
-function beforeDrag(treeId, treeNodes) {
+		function beforeDrag(treeId, treeNodes) {
 			return false;
 		}
 		function beforeEditName(treeId, treeNode) {
@@ -66,7 +68,8 @@ function beforeDrag(treeId, treeNodes) {
 			showLog("[ "+getTime()+" beforeEditName ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name);
 			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
 			zTree.selectNode(treeNode);
-			return confirm("进入节点 -- " + treeNode.name + " 的编辑状态吗？");
+			//return confirm("进入节点 -- " + treeNode.name + " 的编辑状态吗？");
+			return true;
 		}
 		function beforeRemove(treeId, treeNode) {
 			className = (className === "dark" ? "":"dark");
@@ -160,36 +163,7 @@ function beforeDrag(treeId, treeNodes) {
 			$("#selectAll").bind("click", selectAll);
 		});
 		//-->
-	</SCRIPT>
-<style type="text/css">
-.ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
-
-.content_wrap .content_right{padding-left: 330px;}
-.ztree li a:hover {text-decoration:none; background-color: #E7E7E7;}
-.ztree li span.button {background-image:url("left_menuForOutLook.png"); *background-image:url("left_menuForOutLook.gif")}
-	</style>
- </HEAD>
-
-<BODY>
-<h1>OutLook 样式的左侧菜单</h1>
-<h6>[ 文件路径: super/left_menuForOutLook.html ]</h6>
-<div class="content_wrap">
-	<div class="zTreeDemoBackground left">
-		<ul id="treeDemo" class="ztree showIcon"></ul>
-	</div>
-	<div class="content_right">
-		<div class="content">
-<textarea id="editor_id" name="content" style="width:700px;min-height:900px;">
-&lt;strong&gt;HTML内容&lt;/strong&gt;
-</textarea>
-<input type="button" name="subbtn" value="提交" onclick="submit();"/>
-<input type="button" name="subbtn1" value="预览" onclick="submit1();"/>
-<div id='showcontent'style="width:700px;text-algin:left"></div>
-</div>
-<script charset="utf-8" src="editor/kindeditor/kindeditor-all.js"></script>
-<script charset="utf-8" src="editor/kindeditor/lang/zh-CN.js"></script>
-<script>
-        KindEditor.ready(function(K) {
+		KindEditor.ready(function(K) {
                 window.editor = K.create('#editor_id');
         });
         function submit()
@@ -199,8 +173,9 @@ function beforeDrag(treeId, treeNodes) {
 
             // 同步数据后可以直接取得textarea的value
             window.editor.sync();
+            alert(html);
             html = document.getElementById('editor_id').value;
-            //alert(html);
+            alert(html);
             $("#showcontent").html(html);
         }
         function submit1()
@@ -215,8 +190,31 @@ function beforeDrag(treeId, treeNodes) {
             window.open('http://www.baidu.com', '_blank', 'width=645,height=550');
         }
      // 取得HTML内容这是我在本地添加的一行
-        
-</script>
+	</SCRIPT>
+<style type="text/css">
+.ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
+.content_wrap .content_right{padding-left: 330px;}
+.ztree li a:hover {text-decoration:none; background-color: #E7E7E7;}
+</style>
+</HEAD>
+
+<BODY>
+<h1>OutLook 样式的左侧菜单</h1>
+<h6>[ 文件路径: super/left_menuForOutLook.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree showIcon"></ul>
+	</div>
+	<div class="content_right">
+		<div class="content">
+			<textarea id="editor_id" name="content" style="width:700px;min-height:900px;">
+				&lt;strong&gt;HTML内容&lt;/strong&gt;
+			</textarea>
+			<input type="button" name="subbtn" value="提交" onclick="submit();"/>
+			<input type="button" name="subbtn1" value="预览" onclick="submit1();"/>
+			<div id='showcontent'style="width:700px;text-algin:left"></div>
+		</div>
+
 	</div>
 </div>
 </BODY>
